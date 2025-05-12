@@ -1,0 +1,12 @@
+streamlit
+yfinance
+pandas
+numpy
+plotly
+praw
+vaderSentiment
+requests
+time
+logging
+socket
+json

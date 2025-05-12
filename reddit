@@ -1,0 +1,9 @@
+# Reddit setup (use your credentials)
+reddit = praw.Reddit(
+    client_id="V3rxmA_qYIzBNTNW79LWIg",
+    client_secret="xKBA3Nx7f7VQS0fXnOgmJhYZOmGasA",
+    user_agent="python:TradeRiserBot:v1.0"
+)
+
+#NewsAPI
+57d660f019654d129b06bba77f1014d4
