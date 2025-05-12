@@ -18,8 +18,8 @@ import smtplib
 from email.mime.text import MIMEText
 
 # Email Configuration
-FROM_EMAIL = "coderedsupps@gmail.com"  # Replace with your Gmail address
-PASSWORD = "ygcr hggh infk rvie"  # Replace with your Gmail password or App Password
+FROM_EMAIL = "equityscope1@gmail.com"  # Replace with your Gmail address
+PASSWORD = "qvdl ybar bxds gkmo"  # Replace with your Gmail password or App Password
 
 def send_email(to_email, subject, content):
     msg = MIMEText(content)
@@ -375,8 +375,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Email Configuration
-FROM_EMAIL = "coderedsupps@gmail.com"
-PASSWORD = "ygcr hggh infk rvie"
+FROM_EMAIL = "equityscope1@gmail.com"
+PASSWORD = "qvdl ybar bxds gkmo"
 
 def send_email(to_email, subject, content):
     msg = MIMEText(content, 'html')  # Specify HTML content type
