@@ -691,7 +691,23 @@ if stock_ticker:
                     subject="Welcome to EquityScope",
                     content=get_welcome_email_content(email_input)
                 )
-                
+                # Send notification to yourself
+                signup_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                notification_content = f"""
+                <html>
+                    <body>
+                        <h2>New User Signup Notification</h2>
+                        <p>Email: {email_input}</p>
+                        <p>Signup Time: {signup_time}</p>
+                        <p>Application: EquityScope</p>
+                    </body>
+                </html>
+                """
+                send_email(
+                    to_email=FROM_EMAIL,
+                    subject="New EquityScope User Signup",
+                    content=notification_content
+                )
                 if success:
                     st.success(f"Welcome email sent to {email_input}! Check your inbox (and spam folder).")
                 else:
