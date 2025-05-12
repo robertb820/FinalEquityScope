@@ -750,7 +750,7 @@ if stock_ticker:
             metrics["P/B Ratio"] = float(pb_ratio) if pb_ratio != "N/A" and pb_ratio is not None else "N/A"
             
             dividend_yield = stock_info.get("DividendYield", stock_info.get("dividendYield", 0))
-            metrics["Dividend Yield"] = float(dividend_yield) * 100 if dividend_yield != "N/A" and dividend_yield is not None else 0
+            metrics["Dividend Yield"] = float(dividend_yield) if dividend_yield != "N/A" and dividend_yield is not None else 0
             
             beta = stock_info.get("Beta", stock_info.get("beta", "N/A"))
             metrics["Beta"] = float(beta) if beta != "N/A" and beta is not None else "N/A"
