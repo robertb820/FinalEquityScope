@@ -704,26 +704,7 @@ if stock_ticker:
         st.stop()
     
     # Only allow stock lookup if user is under limit or has submitted email
-    with st.spinner("Fetching company info..."):
-        stock_info, error = get_stock_info(stock_ticker)
-        if stock_info:
-            st.session_state.stock_lookups += 1
-            st.session_state.stock_info = stock_info
-            st.session_state.ticker = stock_ticker
-            logger.info(f"Lookup successful, incremented to: {st.session_state.stock_lookups}")
-            
-            company_name = stock_info.get("Name", stock_info.get("longName", "N/A"))
-            sector = stock_info.get("Sector", stock_info.get("sector", "N/A"))
-            industry = stock_info.get("Industry", stock_info.get("industry", "N/A"))
-            market_cap = float(stock_info.get("MarketCapitalization", stock_info.get("marketCap", 0)))
-            summary = stock_info.get("Description", stock_info.get("longBusinessSummary", "No description available."))
-            website = stock_info.get("Website", stock_info.get("website", "N/A"))
-            
-            st.markdown(f'<p class="company-info"><strong>Company:</strong> {company_name} | <strong>Sector:</strong> {sector} | <strong>Industry:</strong> {industry} | <strong>Market Cap:</strong> {market_cap_display(market_cap)} | <strong>Website:</strong> <a href="{website}" target="_blank">{website}</a></p>', unsafe_allow_html=True)
-            st.markdown(f'<p class="description">{summary}</p>', unsafe_allow_html=True)
-        else:
-            st.error(f"Could not fetch company info for {stock_ticker}: {error}")
-            st.markdown("Check your terminal logs for detailed error messages. Ensure you're connected to the internet, or try clearing the cache using the button in the sidebar.")
+
 
     with st.spinner("Fetching company info..."):
         stock_info, error = get_stock_info(stock_ticker)
