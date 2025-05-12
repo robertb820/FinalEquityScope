@@ -6,7 +6,3 @@ plotly
 praw
 vaderSentiment
 requests
-time
-logging
-socket
-json
