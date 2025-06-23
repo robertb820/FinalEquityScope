@@ -6,3 +6,4 @@ plotly
 praw
 vaderSentiment
 requests
+streamlit-cookies
